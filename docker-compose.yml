@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin123'
+      MYSQL_DATABASE: 'flask-crud'
+      MYSQL_ROOT_PASSWORD: 'admin123'
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - C:\\Users\\Admin\\Desktop\\Banco de Dados\\ProjetoBancoDeDados\\Docker:/var/lib/mysql
